@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+     
+
+        <h:outputLabel value="Nome da Subespécie: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.nome}" /><br /> 
+        
+        <h:outputLabel value="Tipo da Juba: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.juba}" /><br /> 
+        
+        <h:outputLabel value="Tamanho: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.tamanho}" /><br /> 
+        
+        <h:outputLabel value="Cor da Pelagem: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.corPelagem}" /><br /> 
+        
+        <h:outputLabel value="Classificação: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.classificacao}" /><br /> 
+        
+        <h:outputLabel value="Taxa de Queda: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.taxaDeQueda}" /><br /> 
+        
+        <h:outputLabel value="Estimativa Populacional: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.estimativaPopulacional}" /><br /> 
+        
+        <h:outputLabel value="Década: "/>
+        <h:inputText value="#{estadoConservacaoBean.ec.decada}" /><br /> 
+
+        <h:outputText value="Híbrido: " />
+        <p:selectBooleanCheckbox value="#{estadoConservacaoBean.ec.hibrido}" /><br />
+       
+        
+       
+            
+        
+        
+</ui:fragment>
+

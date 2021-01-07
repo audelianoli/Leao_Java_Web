@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+    <h3>Presas</h3>
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <p:outputLabel for="ungulados" value="Ungulado:" />
+        <p:selectOneRadio id="ungulados" value="#{dietaBean.di.ungulado}"  layout="grid" columns="3">
+            <f:selectItems value="#{dietaBean.ungulados}" var="u" itemLabel="#{ungulado}" itemValue="#{ungulado}"/>
+        </p:selectOneRadio>
+        
+        <p:outputLabel for="humanos" value="Humano: " />
+        <p:selectOneRadio id="humanos" value="#{dietaBean.di.humano}"  layout="grid" columns="3">
+            <f:selectItems value="#{dietaBean.humanos}" var="h" itemLabel="#{humano}" itemValue="#{humano}"/>
+        </p:selectOneRadio>
+    </h:panelGrid>
+    
+    
+    
+    <h:outputLabel value="Velocidade Máxima:  "/>
+    <h:inputText value="#{dietaBean.di.velocidadeMaxima}" /><br/> 
+</ui:fragment>
+

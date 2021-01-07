@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="animalPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <non-jta-data-source>animalJNDI</non-jta-data-source>
+    <class>br.edu.unifei.pco203.modelo.Animal</class>
+    <class>br.edu.unifei.pco203.modelo.AspectoCultural</class>
+    <class>br.edu.unifei.pco203.modelo.Bando</class>
+    <class>br.edu.unifei.pco203.modelo.Comunicacao</class>
+    <class>br.edu.unifei.pco203.modelo.Dieta</class>
+    <class>br.edu.unifei.pco203.modelo.EstadoConservacao</class>
+    <class>br.edu.unifei.pco203.modelo.FatorDeSucesso</class>
+    <class>br.edu.unifei.pco203.modelo.FormasDeMorte</class>
+    <class>br.edu.unifei.pco203.modelo.Habitat</class>
+    <class>br.edu.unifei.pco203.modelo.Leao</class>
+    <class>br.edu.unifei.pco203.modelo.Reproducao</class>
+    <class>br.edu.unifei.pco203.modelo.Subespecie</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="top">
+                <h:graphicImage library="imagens" name="leao_logo.png"/>
+                Disciplina de Tópicos Especiais em Programação <br /> Animal escolhido: LEÃO
+            </ui:define>
+
+            <ui:define name="left">
+                <h:form>
+                <h:form>
+                    <p:panelMenu style="width:140px">
+                        <p:submenu label="Leão">
+                            <p:menuitem value="Inserir" outcome="/leao/create.xhtml" icon="ui-icon-plus" />
+                            <p:menuitem value="Alterar" outcome="/leao/update.xhtml" icon="ui-icon-pencil"/>
+                            <p:menuitem value="Excluir" outcome="/leao/delete.xhtml" icon="ui-icon-trash"/>
+                        </p:submenu>
+                        <p:submenu label="Habitat">
+                            <p:menuitem value="Inserir" outcome="/habitat/create.xhtml" icon="ui-icon-plus" />
+                             <p:menuitem value="Alterar" outcome="/habitat/update.xhtml" icon="ui-icon-pencil"/>
+                            <p:menuitem value="Excluir" outcome="/habitat/delete.xhtml" icon="ui-icon-trash"/>
+                        </p:submenu>
+                        <p:submenu label="Dieta">
+                            <p:menuitem value="Inserir" outcome="/dieta/create.xhtml" icon="ui-icon-plus" />
+                            <p:menuitem value="Excluir" outcome="/dieta/delete.xhtml" icon="ui-icon-trash"/>
+                        </p:submenu>
+                        
+                        <p:submenu label="Reprodução">
+                            <p:menuitem value="Cruzamento" outcome="/reproducao/create.xhtml" icon="ui-icon-plus" />
+                            
+                        </p:submenu>
+                        <p:submenu label="Estado de Conservação">
+                            <p:menuitem value="Inserir" outcome="/estadoConservacao/create.xhtml" icon="ui-icon-plus" />
+                            <p:menuitem value="Alterar" outcome="/estadoConservacao/update.xhtml" icon="ui-icon-pencil"/>
+                            <p:menuitem value="Excluir" outcome="/estadoConservacao/delete.xhtml" icon="ui-icon-trash"/>
+                        </p:submenu>
+                    </p:panelMenu>
+                </h:form>                
+                </h:form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                Aluno: Audeliano Wolian Li
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

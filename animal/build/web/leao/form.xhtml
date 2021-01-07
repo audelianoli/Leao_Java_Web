@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+     
+
+        <h:outputLabel value="Nome:  "/>
+        <h:inputText value="#{leaoBean.leao.nome}" /><br /> 
+        
+        <h:outputText value="Dominante: " />
+        <p:selectBooleanCheckbox value="#{leaoBean.leao.dominante}" /><br />
+        
+        <h:outputLabel value="Idade:  "/>
+        <h:inputText value="#{leaoBean.leao.idade}" /><br />
+        
+        <h:outputLabel value="Velocidade Máxima:  "/>
+        <h:inputText value="#{leaoBean.leao.velocidadeMaxima}" /><br /> 
+    
+        <p:outputLabel for="sexo" value="Sexo: " />
+        <p:selectOneRadio id="sexo" value="#{leaoBean.leao.sexo}"  layout="grid" columns="1">
+            <f:selectItems value="#{leaoBean.sexo}" var="s" itemLabel="#{sexo}" itemValue="#{sexo}"/>
+        </p:selectOneRadio>
+    
+        <h:outputText value="Leucismo: " />
+        <p:selectBooleanCheckbox value="#{leaoBean.leao.leucismo}" /><br />
+       
+        
+        
+        
+        <!--p:dataTable var="leao" value="#{leaoBean.listaNomes}">
+        <p:column headerText="Nome">
+            <h:outputText value="#{leaoBean.leao.nome}" />
+        </p:column>
+ 
+        <p:column headerText="Idade">
+            <h:outputText value="#{leaoBean.leao.idade}" />
+        </p:column>
+ 
+        <p:column headerText="Velocidade Máxima">
+            <h:outputText value="#{leaoBean.leao.velocidadeMaxima}" />
+        </p:column>
+        </p:dataTable-->
+            
+        
+        
+</ui:fragment>
+

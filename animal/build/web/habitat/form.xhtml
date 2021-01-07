@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+   
+    
+    
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:outputLabel for="continente" value="Continente: " />
+            <p:selectOneMenu id="continente" value="#{habitatBean.continente}" style="width:150px">
+                <p:ajax listener="#{habitatBean.onCountryChange}" update="bioma" />
+                <f:selectItem itemLabel="Selecionar Continente" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{habitatBean.continentes}" />
+            </p:selectOneMenu>
+            
+            
+ 
+            <p:outputLabel for="bioma" value="Bioma Predominante: " />
+            <p:selectOneMenu id="bioma" value="#{habitatBean.bioma}" style="width:150px">
+                <f:selectItem itemLabel="Selecionar Bioma" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{habitatBean.biomas}" />
+            </p:selectOneMenu>
+        </h:panelGrid>
+    
+        <h:outputLabel value="Continente: "/>
+        <h:inputText value="#{habitatBean.hab.continente}" /><br/><br/> 
+
+        <h:outputLabel value="Bioma Predominante: "/>
+        <h:inputText value="#{habitatBean.hab.bioma}" /><br/><br/> 
+
+</ui:fragment>
+
